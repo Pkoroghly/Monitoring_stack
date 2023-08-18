@@ -1,0 +1,19 @@
+#Gather data by curl and lynx command.
+apt install lynx -y
+apt update
+curl -s https://www.tgju.org/profile/price_dollar_rl  | lynx --dump --stdin | grep "نرخ فعلی" | tail -n 1 | awk '{print $3}'
+
+
+
+#Script
+ItemKeyName=$(curl -s https://www.tgju.org/profile/price_dollar_rl  | lynx --dump --stdin | grep "نرخ فعلی" | tail -n 1 | awk '{print $3}')
+JOBDONE=$(echo $?)
+if [ "JOBDONE" - ne 0]; then
+  echo "100"
+else
+  echo $ItemKeyName
+fi
+
+#Zabbix Agent cong
+AllowKey=system.run[*]
+UserParameter=ItemKeyName, #here after , we can write the script or direct command(curl -s https://www.tgju.org/profile/price_dollar_rl  | lynx --dump --stdin | grep "نرخ فعلی" | tail -n 1 | awk '{print $3}').
