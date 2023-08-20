@@ -22,12 +22,3 @@ sudo apt-get purge zabbix-agent
 
 #To delete configuration and/or data files of zabbix-agent and it's dependencies from Ubuntu Xenial then execute:
 sudo apt-get purge --auto-remove zabbix-agent
-
-
-
-#Install and configure Zabbix for your platform
-#Install Zabbix repository
-wget https://repo.zabbix.com/zabbix/6.4/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.4-1+ubuntu22.04_all.deb
-dpkg -i zabbix-release_6.4-1+ubuntu22.04_all.deb
-apt update
-apt install zabbix-agent
