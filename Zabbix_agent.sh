@@ -24,3 +24,9 @@ sudo apt-get purge zabbix-agent
 
 #To delete configuration and/or data files of zabbix-agent and it's dependencies from Ubuntu Xenial then execute:
 sudo apt-get purge --auto-remove zabbix-agent
+
+
+
+
+
+https://www.zabbix.com/download?zabbix=6.4&os_distribution=ubuntu&os_version=22.04&components=server_frontend_agent&db=mysql&ws=nginx
