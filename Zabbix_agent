@@ -10,6 +10,12 @@ systemctl enable zabbix-agent
 
 
 
+#Extracting or Unzipping Tar.gz Files from Linux Command Line
+tar -zxvf file.tar.gz
+
+
+
+
 #Uninstall zabbix-agent
 #To remove just zabbix-agent package itself from Ubuntu 16.04 (Xenial Xerus) execute on terminal:
 sudo apt-get remove zabbix-agent
